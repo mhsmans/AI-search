@@ -18,8 +18,12 @@ public class Main {
 
         Stack<Integer> stack = tree.createPreOrderStack();
         int goalNumber = 728;
+        Stack<Integer> st = new Stack<>();
+        st.push(1);
+        st.push(2);
+        st.push(4);
 
-        DepthFirstSearch dfs = new DepthFirstSearch(goalNumber, stack);
+        DepthFirstSearch dfs = new DepthFirstSearch(goalNumber, st);
         dfs.calculate();
     }
 

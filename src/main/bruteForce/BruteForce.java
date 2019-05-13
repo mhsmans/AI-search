@@ -1,4 +1,4 @@
-package calculate.number.uninformedSearch;
+package main.bruteForce;
 
 import java.util.Stack;
 
@@ -81,5 +81,20 @@ public class BruteForce {
         String startPath = "path: ";
         startPath += startValue;
         calculate(this.gameStack, startValue, startPath);
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(25);
+        stack.push(50);
+        stack.push(7);
+        stack.push(3);
+        stack.push(4);
+        stack.push(9);
+        int goalNumber = 330;
+
+        BruteForce bruteForce = new BruteForce(goalNumber, stack);
+        // Given path is incorrect. This is caused by switching x and y values when x < y.
+        bruteForce.calculate();
     }
 }

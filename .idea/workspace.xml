@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf762fff-d322-42ba-ac68-8e197f30e678" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/calculate/number/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculate/number/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculate/number/BinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculate/number/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculate/number/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculate/number/uninformedSearch/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bruteForce/BruteForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirstSearch.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,10 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/calculate/number/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+            <state relative-caret-position="480">
+              <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,41 +32,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/calculate/number/Node.java">
+        <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="399">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/calculate/number/BinaryTree.java">
+        <entry file="file://$PROJECT_DIR$/src/main/bruteForce/BruteForce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirstSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="69" />
-              <folding>
-                <element signature="e#3254#3255#0" expanded="true" />
-                <element signature="e#3308#3309#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/BruteForce.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1330">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="669">
+              <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -95,18 +78,23 @@
         <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/Dfirst.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/notes.java" />
-        <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirstSearch.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/Test.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/AllSolutionsDepthFirst.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/BruteForce.java" />
         <option value="$PROJECT_DIR$/src/calculate/number/Main.java" />
+        <option value="$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirstSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/bruteForce/BruteForce.java" />
+        <option value="$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java" />
+        <option value="$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="960" />
-    <option name="height" value="1053" />
+    <option name="x" value="140" />
+    <option name="y" value="60" />
+    <option name="width" value="1400" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -116,8 +104,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,13 +122,20 @@
               <item name="CalculateNumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="CalculateNumber" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="number" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CalculateNumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="CalculateNumber" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="number" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="bruteForce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalculateNumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalculateNumber" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="uninformedSearch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -150,8 +145,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557587718408" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557741621744" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genetic-Algorithms-in-Java-Basics-master" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.bruteForce" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,13 +166,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.DepthFirstSearch">
+    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.uninformedSearch.DepthFirstSearch" />
+      <module name="CalculateNumber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.uninformedSearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="calculate.number.Main" />
       <module name="CalculateNumber" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="calculate.number.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="CalculateNumber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,6 +218,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -213,7 +242,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13287087" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13767342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -222,12 +251,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28353328" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24100327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.11995638" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
@@ -277,42 +306,27 @@
     <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirst.java" />
     <entry file="file://$PROJECT_DIR$/src/calculate/number/GameRules.java" />
     <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/notes.java" />
-    <entry file="file://$PROJECT_DIR$/src/calculate/number/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/main/BinaryTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Node.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/bruteForce/BruteForce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="669">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/calculate/number/BinaryTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="399">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/DepthFirstSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="69" />
-          <folding>
-            <element signature="e#3254#3255#0" expanded="true" />
-            <element signature="e#3308#3309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calculate/number/uninformedSearch/BruteForce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calculate/number/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+        <state relative-caret-position="480">
+          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

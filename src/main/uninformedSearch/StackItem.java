@@ -2,8 +2,8 @@ package main.uninformedSearch;
 
 public class StackItem {
 
-    private int value;
-    private static final String[] OPERATIONS = {"+", "*", "-", "/"};
+    private double value;
+    private static final String[] OPERATIONS = {"+", "/", "-", "*"};
     private String currentOperation;
     private int operationIndex = 0;
 
@@ -12,7 +12,7 @@ public class StackItem {
         this.currentOperation = OPERATIONS[this.operationIndex];
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -23,6 +23,7 @@ public class StackItem {
     public void incrementOperation() {
         if (this.operationIndex != 3) {
             this.currentOperation = OPERATIONS[this.operationIndex + 1];
+            this.operationIndex += 1;
         }
     }
 

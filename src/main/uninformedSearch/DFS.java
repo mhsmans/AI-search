@@ -3,13 +3,20 @@ package main.uninformedSearch;
 import java.util.*;
 
 public class DFS {
+    // Depth first approach for solving countdown numbers game.
+    // Six numbers are selected; they are restricted to numbers up to ten,
+    // or multiples of 25 up to 100. There is one three-digit number (100 - 999)
+    // that needs to be obtained by performing arithmetic operations on the six
+    // numbers.
 
     private Stack<StackItem> leftStack = new Stack<>();
     private Stack<StackItem> rightStack = new Stack<>();
     private Stack<String> pathStack = new Stack<>();
-    private int result = 0;
+    private Stack<Integer> resultStack = new Stack<>();
     private int goalNumber;
 
+    // The first number gets pushed into the leftStack. The other numbers go
+    // into the rightStack.
     public DFS(int goalNumber, int[] numbers) {
         // tempStack is used to reverse the order of the rightStack
         Stack<StackItem> tempStack = new Stack<>();
@@ -27,33 +34,132 @@ public class DFS {
         }
 
         this.goalNumber = goalNumber;
-        this.result = leftStack.peek().getValue();
+        this.resultStack.push(leftStack.peek().getValue());
     }
 
-    public void startSearch() {
+    public void search() {
         if(!rightStack.empty()) {
             operate();
+            // Check if solution is found. If not, go on searching.
+            if(!checkResult()) {
+                search();
+            }
+        }
+        // If the rightStack is empty, all numbers are used to create results. If we want to go
+        // on with calculating possible results, we need to remove the first items from the resultStack
+        // and the leftStack.
+        else {
+            rightStack.push(leftStack.pop());
+            resultStack.pop();
+            pathStack.pop();
+
+            // if the top item of the leftStack has reached its last operation, we need to pop the
+            // item to the rightStack. This is repeated until the top item on the left stack has not
+            // yet reached its final operation. Also, the items that go from leftStack to rightStack
+            // need to have their operation set to starting position (+). In addition to that, we also
+            // need to remove the last item from the resultStack.
+            while(!leftStack.empty() && leftStack.peek().getCurrentOperation().equals("/")) {
+                rightStack.push(leftStack.pop());
+                resultStack.pop();
+                pathStack.pop();
+                rightStack.peek().initializeOperation();
+            }
+
+            // If the leftStack is not yet empty, we can increment the operation of the top item. If the
+            // most left item (the starting number) on the leftStack has reached its final operation, it
+            // will be popped to the rightStack. This implies that when all operations are done (every
+            // item has reached its final operation), the leftStack will be empty and the program will stop
+            // searching.
+            if (!leftStack.empty()) {
+                leftStack.peek().incrementOperation();
+                operate();
+                // Check if solution is found. If not, go on searching.
+                if(!checkResult()) {
+                    search();
+                }
+            } else {
+                System.out.println("No result found.");
+            }
+
         }
     }
 
+    // Check operation of the leftStack top item. Use this operation to create a path
+    // (step in calculation process). New path en result are pushed to corresponding
+    // stacks. Top item of rightStack gets pushed to the leftStack.
     private void operate() {
-        // Add calculation step to pathStack. Pop rightStack into leftStack. Change result.
         if(leftStack.peek().getCurrentOperation().equals("+")) {
-            String path = result + leftStack.peek().getCurrentOperation() + rightStack.peek().getValue();
-            result += rightStack.peek().getValue();
+            String path = resultStack.peek() + leftStack.peek().getCurrentOperation() + rightStack.peek().getValue();
+            resultStack.push(resultStack.peek() + rightStack.peek().getValue());
             pathStack.push(path);
             leftStack.push(rightStack.pop());
         }
-        System.out.println(pathStack.peek());
-        startSearch();
+        else if(leftStack.peek().getCurrentOperation().equals("*")) {
+            String path = resultStack.peek() + leftStack.peek().getCurrentOperation() + rightStack.peek().getValue();
+            resultStack.push(resultStack.peek() * rightStack.peek().getValue());
+            pathStack.push(path);
+            leftStack.push(rightStack.pop());
+        }
+        else if(leftStack.peek().getCurrentOperation().equals("-")) {
+            // If the resultStack top item value is less than the rightStack top item value,
+            // switch the order.
+            if(resultStack.peek() < rightStack.peek().getValue()) {
+                String path = rightStack.peek().getValue() + leftStack.peek().getCurrentOperation() + resultStack.peek();
+                resultStack.push(rightStack.peek().getValue() - resultStack.peek());
+                pathStack.push(path);
+                leftStack.push(rightStack.pop());
+            } else {
+                String path = resultStack.peek() + leftStack.peek().getCurrentOperation() + rightStack.peek().getValue();
+                resultStack.push(resultStack.peek() - rightStack.peek().getValue());
+                pathStack.push(path);
+                leftStack.push(rightStack.pop());
+            }
+        } else if(leftStack.peek().getCurrentOperation().equals("/")) {
+            // If the resultStack top item value is less than the rightStack top item value,
+            // switch the order. Do not switch order when lowest number equals zero.
+            if(resultStack.peek() < rightStack.peek().getValue() && resultStack.peek() != 0) {
+                String path = rightStack.peek().getValue() + leftStack.peek().getCurrentOperation() + resultStack.peek();
+                resultStack.push(rightStack.peek().getValue() / resultStack.peek());
+                pathStack.push(path);
+                leftStack.push(rightStack.pop());
+            } else {
+                String path = resultStack.peek() + leftStack.peek().getCurrentOperation() + rightStack.peek().getValue();
+                resultStack.push(resultStack.peek() / rightStack.peek().getValue());
+                pathStack.push(path);
+                leftStack.push(rightStack.pop());
+            }
+        }
+    }
+
+    // Check if the result is equal to the goalNumber.
+    private boolean checkResult() {
+        if(resultStack.peek() == goalNumber) {
+            System.out.println("Solution found!: " + resultStack.peek() + "\n");
+
+            Stack<String> reversedStack = new Stack<>();
+
+            // Reverse path stack.
+            while (!pathStack.empty()) {
+                reversedStack.push(pathStack.pop());
+            }
+
+            // Print items from path stack.
+            while (!reversedStack.empty()) {
+                System.out.println(reversedStack.pop());
+            }
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
-        int goalNumber = 22;
-        int[] numbers = {4, 2, 5};
+        int goalNumber = 222;
+        int[] numbers = {4, 50, 6, 10, 100, 8};
 
         DFS dfs = new DFS(goalNumber, numbers);
-        dfs.startSearch();
+        dfs.search();
     }
 
 

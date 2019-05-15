@@ -17,30 +17,13 @@ public class DFS {
     private int goalNumber;
     private int[] numbers;
 
-    public DFS(int goalNumber, int[] numbers) {
+    DFS(int goalNumber, int[] numbers) {
         this.numbers = numbers;
         this.goalNumber = goalNumber;
-        this.randomizeOrder();
-
-        // tempStack is used to reverse the order of the rightStack
-        Stack<StackItem> tempStack = new Stack<>();
-        for(int i = 0; i < numbers.length; i++) {
-            StackItem stackItem = new StackItem(numbers[i]);
-            if(i == 0) {
-                this.leftStack.push(stackItem);
-            } else {
-                tempStack.push(stackItem);
-            }
-        }
-        // Pop tempStack items into rightStack (reverse order)
-        while (!tempStack.empty()) {
-            this.rightStack.push(tempStack.pop());
-        }
-
-        this.resultStack.push(leftStack.peek().getValue());
+        this.initializeStacks();
     }
 
-    public void search() {
+    void search() {
         if(!rightStack.empty()) {
             operate();
             // Check if solution is found. If not, go on searching.
@@ -83,7 +66,7 @@ public class DFS {
                     search();
                 }
             } else {
-                System.out.println("No result found.");
+                System.out.println("No solution found.");
             }
 
         }
@@ -137,7 +120,7 @@ public class DFS {
     }
 
     // Check if the result is equal to the goalNumber.
-    private boolean checkResult() {
+    boolean checkResult() {
         if(resultStack.peek() == goalNumber) {
             System.out.println("Solution found!: " + resultStack.peek() + "\n");
 
@@ -152,14 +135,14 @@ public class DFS {
             while (!reversedStack.empty()) {
                 System.out.println(reversedStack.pop());
             }
-
             return true;
         } else {
             return false;
         }
     }
 
-    private void randomizeOrder()
+    // Randomly create array from numbers array.
+    void randomizeOrder()
     {
         int index, temp;
         Random random = new Random();
@@ -178,11 +161,31 @@ public class DFS {
         System.out.print("\n\n");
     }
 
-    public static void main(String[] args) {
-        int goalNumber = 251;
-        int[] numbers = {50, 25, 5, 8, 1, 6};
+    // Make sure stacks are filled correct before starting search.
+    void initializeStacks() {
+        while (!leftStack.empty()) {
+            leftStack.pop();
+        }
+        while (!rightStack.empty()) {
+            rightStack.pop();
+        }
+        // tempStack is used to reverse the order of the rightStack
+        Stack<StackItem> tempStack = new Stack<>();
+        for(int i = 0; i < numbers.length; i++) {
+            StackItem stackItem = new StackItem(numbers[i]);
+            if(i == 0) {
+                this.leftStack.push(stackItem);
+            } else {
+                tempStack.push(stackItem);
+            }
+        }
+        // Pop tempStack items into rightStack (reverse order)
+        while (!tempStack.empty()) {
+            this.rightStack.push(tempStack.pop());
+        }
 
-        DFS dfs = new DFS(goalNumber, numbers);
-        dfs.search();
+        this.resultStack.push(leftStack.peek().getValue());
     }
+
+
 }

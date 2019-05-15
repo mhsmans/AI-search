@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf762fff-d322-42ba-ac68-8e197f30e678" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/bruteForce/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bruteForce/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/uninformedSearch/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/uninformedSearch/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,14 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/DFS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="181" column="28" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
+            <state relative-caret-position="182">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -105,14 +110,15 @@
         <option value="$PROJECT_DIR$/src/main/uninformedSearch/DepthFirstSearch.java" />
         <option value="$PROJECT_DIR$/src/main/uninformedSearch/StackItem.java" />
         <option value="$PROJECT_DIR$/src/main/uninformedSearch/DFS.java" />
+        <option value="$PROJECT_DIR$/src/main/uninformedSearch/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="140" />
-    <option name="y" value="60" />
-    <option name="width" value="1400" />
-    <option name="height" value="970" />
+    <option name="x" value="223" />
+    <option name="y" value="27" />
+    <option name="width" value="1390" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -163,7 +169,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557931373222" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557940072850" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genetic-Algorithms-in-Java-Basics-master" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -184,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DFS">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BruteForce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.bruteForce.BruteForce" />
       <module name="CalculateNumber" />
@@ -224,19 +230,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="calculate.number.Main" />
-      <module name="CalculateNumber" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="calculate.number.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="CalculateNumber" />
@@ -250,13 +243,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.uninformedSearch.Main" />
+      <module name="CalculateNumber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.uninformedSearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DFS" />
         <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.BruteForce" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -286,12 +292,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32824427" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33369684" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45038167" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36126223" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36095965" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
@@ -377,11 +383,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/DFS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="181" column="28" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
+        <state relative-caret-position="182">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/uninformedSearch/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
         </state>
       </provider>
     </entry>

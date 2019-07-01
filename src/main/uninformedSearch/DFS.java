@@ -17,6 +17,7 @@ public class DFS {
     private int goalNumber;
     private int[] numbers;
 
+    // Assign numbers and goal number. Initialize the stacks.
     DFS(int goalNumber, int[] numbers) {
         this.numbers = numbers;
         this.goalNumber = goalNumber;
